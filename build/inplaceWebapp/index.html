@@ -5,13 +5,24 @@
 <script
 	src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="scripts.js"></script>
-<title>Insert title here</title>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<title>Cars</title>
 </head>
 <body>
-	<script>
-		document.write(Date());
-	</script>
-	<button id="button">Get Users</button>
-	<table id="usersTable"></table>
+	<input type="text" id="brand" />
+	<input type="text" id="model" />
+	<input type="text" id="price" />
+	<input type="text" id="year" />
+	<input type="text" id="hp" />
+	<button id="button" onClick="addCar()">Add Cars</button>
+	
+	<input type="text" id="brandFilter" />
+	<input type="text" id="modelFilter" />
+	<input type="text" id="priceFilter" />
+	<input type="text" id="yearFilter" />
+	<input type="text" id="hpFilter" />
+	<button id="FilterButton" onClick="filter()">Filter</button>
+	<table id="carsTable"></table>
 </body>
 </html>
