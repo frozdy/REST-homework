@@ -8,21 +8,54 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <title>Cars</title>
+<style>
+      table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+      }
+      td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+      }
+      tr:nth-child(even) {
+          background-color: #e6ffe6;
+      }
+      
+     input {
+     	  text-align: center;
+     }
+      
+    </style>
 </head>
 <body>
-	<input type="text" id="brand" />
-	<input type="text" id="model" />
-	<input type="text" id="price" />
-	<input type="text" id="year" />
-	<input type="text" id="hp" />
-	<button id="button" onClick="addCar()">Add Cars</button>
-	
-	<input type="text" id="brandFilter" />
-	<input type="text" id="modelFilter" />
-	<input type="text" id="priceFilter" />
-	<input type="text" id="yearFilter" />
-	<input type="text" id="hpFilter" />
+
+	<input type="text" id="brand" placeholder="Brand" />
+	<input type="text" id="model" placeholder="Model" />
+	<input type="text" id="price" placeholder="Price in €" />
+	<input type="text" id="year" placeholder="Year"/>
+	<input type="text" id="hp" placeholder="Horsepower"  />
+	<button id="button" onClick="addCar()">Add Car</button>
+	<p></p>
+	<input type="text" id="brandFilter" placeholder="Brand"/>
+	<input type="text" id="modelFilter" placeholder="Model"/>
+	<input type="text" id="priceFilter" placeholder="Price in €"/>
+	<input type="text" id="yearFilter" placeholder="Year"/>
+	<input type="text" id="hpFilter" placeholder="Horsepower"/>
 	<button id="FilterButton" onClick="filter()">Filter</button>
-	<table id="carsTable"></table>
+	<p></p>
+	<table id="carsTable">
+	<thead>
+  <tr>
+    <th> # </th>
+    <th> Brand </th>
+    <th> Model </th>
+    <th> Price in € </th>
+    <th> Year </th>
+    <th> Horsepower </th>
+  </tr>
+</thead>
+	</table>
 </body>
 </html>

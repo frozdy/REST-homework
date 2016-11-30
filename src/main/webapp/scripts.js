@@ -54,7 +54,9 @@ function filter(){
 		url: "http://localhost:8080/rst2/api/cars",
 		type: "GET",
 		dataType: "json",
-		data:{brandFilter:$("#brandFilter").val(), modelFilter:$("#modelFilter").val()},
+		data:{brandFilter:$("#brandFilter").val(), modelFilter:$("#modelFilter").val(),
+			yearFilter:$("#yearFilter").val(),priceFilter:$("#priceFilter").val(),
+			hpFilter:$("#hpFilter").val()},
 		success: function(data) {
 			$("#carsTable tr").remove();
 			$.each(data, function(index){
